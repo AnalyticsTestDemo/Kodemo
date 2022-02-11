@@ -22,6 +22,6 @@ spec:
       name: ko-example-rev1
     spec:
       containers:
-        - image: github.com/AnalyticsTestDemo/Kodemo/
+        - image: github.com/AnalyticsTestDemo/Kodemo
           ports:
             - containerPort: 8080
