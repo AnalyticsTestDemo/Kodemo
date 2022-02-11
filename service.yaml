@@ -1,27 +1,12 @@
-# apiVersion: serving.knative.dev/v1alpha1
-# kind: Service
-# metadata:
-#   name: ko-example
-#   namespace: default
-# spec:
-#   runLatest:
-#     configuration:
-#       revisionTemplate:
-#         spec:
-#           container:
-#             image: github.com/AnalyticsTestDemo/Kodemo/
-
-apiVersion: serving.knative.dev/v1
-kind: Service
-metadata:
-  name: ko-example
-spec:
-  template:
-    metadata:
-      # This is the name of our new "Revision," it must follow the convention {service-name}-{revision-name}
-      name: ko-example-rev1
-    spec:
-      containers:
-        - image: github.com/AnalyticsTestDemo/Kodemo
-          ports:
-            - containerPort: 8080
+ apiVersion: serving.knative.dev/v1
+ kind: Service
+ metadata:
+   name: ko-example
+   namespace: default
+ spec:
+   runLatest:
+     configuration:
+       revisionTemplate:
+         spec:
+           container:
+             image: github.com/AnalyticsTestDemo/Kodemo
